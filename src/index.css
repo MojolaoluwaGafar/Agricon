@@ -1,0 +1,32 @@
+.logoscreen1{
+  background-image: url("../src/assets/logoscreen1wallpaper.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.logo{
+  padding-top: 160px;
+}
+.tap{
+  padding-top: 350px;
+}
+.logoscreen2, .languageselectionscreen{
+  background-color: #31A05F;
+  height: 100%;
+}
+.logo2{
+  padding-top: 100px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+.lang{
+   font-family: "IM Fell DW Pica", serif;
+}
+.initialbg{
+  background-color: #31A05F;
+}
+.acceptbtn{
+   background-color: #31A05F;
+   font-size: 24px;
+}
+
