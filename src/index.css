@@ -1,3 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+:root{
+  --greenbg: #31A05F;
+}
+
 .logoscreen1{
   background-image: url("../src/assets/logoscreen1wallpaper.png");
   background-size: cover;
@@ -10,23 +19,37 @@
 .tap{
   padding-top: 350px;
 }
-.logoscreen2, .languageselectionscreen{
-  background-color: #31A05F;
-  height: 100%;
+.languageselectionscreen, .OnboardingPage1{
+  background-color: var(--greenbg);
+}
+.logoscreen2{
+  background-color: var(--greenbg);
+  height: 100vh;
 }
 .logo2{
   padding-top: 100px;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&display=swap');
 .lang{
    font-family: "IM Fell DW Pica", serif;
 }
 .initialbg{
-  background-color: #31A05F;
+  background-color: var(--greenbg);
 }
 .acceptbtn{
-   background-color: #31A05F;
+   background-color: var(--greenbg);
    font-size: 24px;
+   font-family: "Inria Sans", serif;
 }
 
+.langlabel{
+ font-family: "Inter", serif;
+}
+.nxtbtn{
+  background-color: var(--greenbg);
+}
+.onboardingheading{
+  color: var(--greenbg);
+  font-family: "Inter", serif;
+  font-weight: 700;
+}

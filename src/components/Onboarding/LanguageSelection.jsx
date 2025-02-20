@@ -1,13 +1,13 @@
 import React, { useState } from "react";
 
-const LanguageSelection = ({ onSelect }) => {
+const LanguageSelection = ({ onSelect, }) => {
   const languages = [
-    { name: "English", native: "English", initial: "E" },
-    { name: "Hindi", native: "हिंदी", initial: "H" },
-    { name: "Bengali", native: "বাংলা", initial: "B" },
-    { name: "Maithili", native: "मैथिली", initial: "M" },
-    { name: "Gujarati", native: "ગુજરાતી", initial: "G" },
-    { name: "Kannada", native: "ಕನ್ನಡ", initial: "K" },
+    { name: "English", initial: "E" },
+    { name: "Hindi", initial: "H" },
+    { name: "Bengali", initial: "B" },
+    { name: "Maithili", initial: "M" },
+    { name: "Gujarati", initial: "G" },
+    { name: "Kannada", initial: "K" },
   ];
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
@@ -20,7 +20,7 @@ const LanguageSelection = ({ onSelect }) => {
   };
 
   return (
-    <div className="languageselectionscreen">
+    <div className="languageselectionscreen h-100">
       <div className="card flex rounded-4 m-auto w-90 ">
         <p className="text-sm font-semibold text-center my-4 lang">
           <span className="text-3xl font-thin">S</span>ELECT
@@ -42,7 +42,9 @@ const LanguageSelection = ({ onSelect }) => {
                       </span>
                     </div>
                     <div className="flex flex-col items-center ms-2 mt-4">
-                      <p className="font-bold text-3xl">{language.name}</p>
+                      <p className="font-bold text-3xl langlabel">
+                        {language.name}
+                      </p>
                       {/* <p>{language.name}</p> */}
                     </div>
                   </div>
@@ -50,8 +52,8 @@ const LanguageSelection = ({ onSelect }) => {
                     <input
                       name="language"
                       checked={selectedLanguage?.name === language.name}
-                      className="w-5 h-5"
                       type="radio"
+                      className="w-5 h-5 accent-green-600 border-green-600"
                     />
                   </div>
                 </p>
@@ -60,14 +62,15 @@ const LanguageSelection = ({ onSelect }) => {
             </div>
           ))}
         </div>
-        <div className="flex items-center px-4 gap-4">
+        <div className="flex items-center px-4 gap-3">
           <input
             checked={termsAccepted}
             onChange={() => setTermsAccepted(!termsAccepted)}
-            className="w-15 h-15 text-green-600"
             type="checkbox"
+            className="w-5 h-5 rounded-full border-2 border-green-600 bg-green-600 checked:bg-green-600"
           />
-          <label className="pe-5 text-green-600" htmlFor="terms">
+
+          <label className="pe-5 text-green-600 langlabel" htmlFor="terms">
             I agree to the terms and conditions and privacy policy
           </label>
         </div>
