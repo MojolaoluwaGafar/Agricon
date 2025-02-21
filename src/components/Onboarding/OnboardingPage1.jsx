@@ -3,16 +3,32 @@ import { IoIosArrowRoundBack } from "react-icons/io";
 import ecommerce from "../../assets/e-commerce-seo1 1.png"
 import ellipse24 from "../../assets/Ellipse 24.png"
 import ellipse27 from "../../assets/Ellipse 27.png";
+import { useNavigate } from 'react-router-dom';
 
-const OnboardingPage1 = ({}) => {
+const OnboardingPage1 = () => {
+     const navigate = useNavigate();
+  
+      const handleNext = () => {
+        navigate("/OnboardingPage2");
+      };
+  
+      const handleSkip = () => {
+        navigate("/"); // change "/main" to your main app route
+      };
+  
+      // Optional: if you want the back arrow to do something, you can add a handler
+      const handleBack = () => {
+        navigate(-1); // go back one page
+      };
+
   return (
-  <div className="OnboardingPage1 min-h-100">
+  <div className="OnboardingPage1 min-vh-100">
       <div className="card h-100 w-90 mx-auto">
         <div className="flex flex-row justify-between px-2">
-          <span className="text-6xl text-green-600">
+          <span onClick={handleBack} className="text-6xl text-green-600">
             <IoIosArrowRoundBack />
           </span>
-          <button className="text-green-600 border-0 bg-transparent fs-2 font-bold">
+          <button onClick={handleSkip} className="text-green-600 border-0 bg-transparent fs-2 font-bold">
             Skip
           </button>
         </div>
@@ -29,7 +45,7 @@ const OnboardingPage1 = ({}) => {
           <img src={ellipse24} alt="" />
           <img src={ellipse24} alt="" />
         </div>
-          <button className='w-80 h-12 rounded-3 mx-auto my-4 fs-2 fw-bolder text-white nxtbtn'>Next</button>
+          <button onClick={handleNext} className='w-80 h-12 rounded-3 mx-auto my-4 fs-2 fw-bolder text-white nxtbtn'>Next</button>
       </div>
     </div>
   );

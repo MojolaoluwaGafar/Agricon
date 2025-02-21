@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=IM+Fell+DW+Pica:ital@0;1&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inria+Sans:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+
+
+
 
 :root{
   --greenbg: #31A05F;
@@ -45,11 +49,31 @@
 .langlabel{
  font-family: "Inter", serif;
 }
-.nxtbtn{
+.nxtbtn,.signupbtn{
   background-color: var(--greenbg);
 }
 .onboardingheading{
   color: var(--greenbg);
   font-family: "Inter", serif;
   font-weight: 700;
+}
+.signupbtn{
+  font-family: "inria seriff";
+}
+.greencolor{
+  color: var(--greenbg);
+}
+.greencolorbg{
+  background-color: var(--greenbg);
+}
+.fbcolorbg{
+  background-color: #3B5998;
+ font-family: "Josefin Sans", serif;
+}
+.googlecolorbg{
+  background-color: #F44336;
+  font-family: "Josefin Sans", serif;
+}
+.sociallinks{
+  font-family: "Josefin Sans", serif;
 }

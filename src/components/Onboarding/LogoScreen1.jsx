@@ -2,17 +2,19 @@ import React from 'react'
 import { useState } from 'react';
 import logo from "../../assets/loader 1.png"
 import agrikonlogodark from "../../assets/logo-dark.png"
+import { useNavigate } from 'react-router-dom';
 
 
 
 
-const LogoScreen1 = ({onNext}) => {
+const LogoScreen1 = () => {
     const [fadeOut, setFadeOut] = useState(false);
+    const navigate = useNavigate()
 
     const handleTap = () => {
       setFadeOut(true);
       setTimeout(() => {
-        onNext(); 
+       navigate("/logoscreen2") 
       }, 500); 
     };
   

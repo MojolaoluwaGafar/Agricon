@@ -1,6 +1,7 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
-const LanguageSelection = ({ onSelect, }) => {
+const LanguageSelection = ({}) => {
   const languages = [
     { name: "English", initial: "E" },
     { name: "Hindi", initial: "H" },
@@ -12,15 +13,21 @@ const LanguageSelection = ({ onSelect, }) => {
 
   const [selectedLanguage, setSelectedLanguage] = useState(null);
   const [termsAccepted, setTermsAccepted] = useState(false);
+  const navigate = useNavigate()
 
 
   const handleLanguageSelect = (language) => {
     setSelectedLanguage(language);
-    onSelect(language.name);
+  };
+
+  const handleAccept =()=>{
+    if (selectedLanguage && termsAccepted) {
+      navigate("/OnboardingPage1");
+    }
   };
 
   return (
-    <div className="languageselectionscreen h-100">
+    <div className="languageselectionscreen min-vh-100">
       <div className="card flex rounded-4 m-auto w-90 ">
         <p className="text-sm font-semibold text-center my-4 lang">
           <span className="text-3xl font-thin">S</span>ELECT
@@ -28,7 +35,7 @@ const LanguageSelection = ({ onSelect, }) => {
         </p>
         <div className="px-3">
           {languages.map((language) => (
-            <div className="">
+            <div key={language.name}>
               <div>
                 <p
                   key={language.name}
@@ -75,9 +82,7 @@ const LanguageSelection = ({ onSelect, }) => {
           </label>
         </div>
         <button
-          onClick={() =>
-            selectedLanguage && termsAccepted && onSelect(selectedLanguage.name)
-          }
+          onClick={handleAccept}
           disabled={!selectedLanguage || !termsAccepted}
           type="submit"
           className="w-80 h-13 rounded-3 text-white mx-auto my-3 acceptbtn"
